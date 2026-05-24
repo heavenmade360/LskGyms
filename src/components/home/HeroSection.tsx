@@ -8,11 +8,11 @@ export function HeroSection() {
          <div className="w-[1200px] h-[1200px] border-[60px] border-white/60 rotate-45 transform scale-x-[1.5]"></div>
       </div>
 
-      <div className="relative z-10 w-full flex flex-col md:flex-row items-center justify-between h-full min-h-[600px]">
+      <div className="relative z-10 w-full flex flex-col md:flex-row items-center justify-between h-full min-h-[500px] md:min-h-[600px] gap-8 md:gap-0 pt-8 md:pt-0">
         
         {/* NO PAIN (Left) */}
-        <div className="w-full md:w-1/3 flex flex-col justify-center items-center md:items-start order-2 md:order-1 mt-8 md:mt-0 relative z-20">
-          <h1 className="text-7xl md:text-[100px] lg:text-[140px] xl:text-[160px] font-heading font-black leading-[0.8] text-brand-dark tracking-tighter text-center md:text-left drop-shadow-md">
+        <div className="w-full md:w-1/3 flex flex-col justify-center items-center md:items-start order-1 md:order-1 mt-0 relative z-20">
+          <h1 className="text-6xl sm:text-7xl md:text-[100px] lg:text-[140px] xl:text-[160px] font-heading font-black leading-[0.8] text-brand-dark tracking-tighter text-center md:text-left drop-shadow-md">
             NO<br className="hidden md:block" /> PAIN
           </h1>
           <p className="mt-8 text-sm lg:text-base text-zinc-600 max-w-[280px] text-center md:text-left font-medium leading-relaxed">
@@ -35,20 +35,20 @@ export function HeroSection() {
         </div>
 
         {/* Center Image */}
-        <div className="w-full md:w-1/3 flex justify-center order-1 md:order-2 relative z-30 h-[400px] md:h-auto">
+        <div className="w-full md:w-1/3 flex justify-center order-2 md:order-2 relative z-30 h-[300px] sm:h-[400px] md:h-auto">
           {/* Using object-contain and drop shadow to simulate a cut-out effect for any image */}
            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?q=80&w=800&auto=format&fit=crop" 
-                className="max-h-[600px] lg:max-h-[800px] w-auto object-cover rounded-3xl md:rounded-none md:object-contain drop-shadow-2xl z-30 relative" 
+                className="max-h-[350px] sm:max-h-[450px] md:max-h-[600px] lg:max-h-[800px] w-auto object-cover rounded-3xl md:rounded-none md:object-contain drop-shadow-2xl z-30 relative" 
                 alt="Gym Training" />
         </div>
 
         {/* NO GAIN (Right) */}
-        <div className="w-full md:w-1/3 flex flex-col justify-center items-center md:items-end order-3 mt-8 md:mt-0 relative z-20">
-          <h1 className="text-7xl md:text-[100px] lg:text-[140px] xl:text-[160px] font-heading font-black leading-[0.8] text-brand-dark tracking-tighter text-center md:text-right drop-shadow-md">
+        <div className="w-full md:w-1/3 flex flex-col justify-center items-center md:items-end order-3 mt-0 relative z-20">
+          <h1 className="text-6xl sm:text-7xl md:text-[100px] lg:text-[140px] xl:text-[160px] font-heading font-black leading-[0.8] text-brand-dark tracking-tighter text-center md:text-right drop-shadow-md">
             NO<br className="hidden md:block"/> GAIN
           </h1>
           
-          <div className="mt-8 md:mt-12 relative w-64 lg:w-72 rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border-4 border-white">
+          <div className="mt-8 md:mt-12 relative w-[90%] max-w-[280px] sm:w-64 lg:w-72 rounded-3xl overflow-hidden shadow-2xl group cursor-pointer border-4 border-white">
             <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=400&auto=format&fit=crop" className="w-full h-40 lg:h-48 object-cover group-hover:scale-105 transition-transform duration-700" alt="Video thumbnail" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-14 h-14 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-brand-dark group-hover:scale-110 transition-transform shadow-xl">

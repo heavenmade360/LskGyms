@@ -4,25 +4,25 @@ const classes = [
   {
     title: "Personal Training",
     image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?q=80&w=600&auto=format&fit=crop",
-    className: "h-[300px] md:h-[400px]",
+    className: "h-[250px] sm:h-[300px] md:h-[400px]",
     containerClass: "md:col-span-3 md:mt-12",
   },
   {
     title: "Outdoor Classes",
     image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?q=80&w=600&auto=format&fit=crop",
-    className: "h-[300px] md:h-[350px]",
+    className: "h-[250px] sm:h-[300px] md:h-[350px]",
     containerClass: "md:col-span-3 md:mt-24",
   },
   {
     title: "Digital Coaching",
     image: "https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=600&auto=format&fit=crop",
-    className: "h-[300px] md:h-[300px]",
+    className: "h-[250px] sm:h-[300px] md:h-[300px]",
     containerClass: "md:col-span-3",
   },
   {
     title: "Group Training",
     image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?q=80&w=600&auto=format&fit=crop",
-    className: "h-[300px] md:h-[350px]",
+    className: "h-[250px] sm:h-[300px] md:h-[350px]",
     containerClass: "md:col-span-3 md:-mt-12",
   }
 ];

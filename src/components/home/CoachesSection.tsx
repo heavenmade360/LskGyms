@@ -4,7 +4,7 @@ export function CoachesSection() {
       <div className="grid md:grid-cols-2 gap-16 items-center">
         
         {/* Images */}
-        <div className="relative h-[400px] md:h-[500px] w-full">
+        <div className="relative h-[300px] sm:h-[400px] md:h-[500px] w-full">
           {/* Orange Background Block with single coach */}
           <div className="absolute left-0 bottom-0 w-2/3 h-5/6 bg-brand-orange rounded-[40px] overflow-hidden flex items-end justify-center shadow-xl">
              <img 

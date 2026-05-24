@@ -11,26 +11,26 @@ export function ReviewsSection() {
       <div className="grid lg:grid-cols-2 gap-16 items-center">
         
         {/* Portraits Collage */}
-        <div className="relative h-[400px] flex items-center justify-center">
+        <div className="relative h-[300px] md:h-[400px] flex items-center justify-center">
           <img 
             src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?q=80&w=200&auto=format&fit=crop" 
             alt="Reviewer" 
-            className="w-32 h-32 rounded-full object-cover absolute top-0 left-10 border-4 border-white shadow-xl"
+            className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover absolute top-0 left-0 sm:left-10 border-4 border-white shadow-xl"
           />
           <img 
             src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop" 
             alt="Reviewer" 
-            className="w-48 h-48 rounded-full object-cover absolute top-10 right-20 border-4 border-white shadow-xl z-20"
+            className="w-36 h-36 sm:w-48 sm:h-48 rounded-full object-cover absolute top-10 right-0 sm:right-20 border-4 border-white shadow-xl z-20"
           />
           <img 
             src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" 
             alt="Reviewer" 
-            className="w-36 h-36 rounded-full object-cover absolute bottom-0 left-1/4 border-4 border-white shadow-xl z-10"
+            className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover absolute bottom-0 left-4 sm:left-1/4 border-4 border-white shadow-xl z-10"
           />
           <img 
             src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" 
             alt="Reviewer" 
-            className="w-24 h-24 rounded-full object-cover absolute bottom-12 right-10 border-4 border-white shadow-xl"
+            className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover absolute bottom-12 right-4 sm:right-10 border-4 border-white shadow-xl"
           />
         </div>
 

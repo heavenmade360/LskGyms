@@ -13,11 +13,14 @@ export function ProcessSection() {
         </p>
       </div>
 
-      <div className="relative mt-24 max-w-5xl mx-auto">
-        {/* Dashed Line */}
+      <div className="relative mt-16 md:mt-24 max-w-5xl mx-auto">
+        {/* Dashed Line (Desktop) */}
         <div className="absolute top-1/2 left-0 w-full h-[2px] border-t-2 border-dashed border-zinc-300 -translate-y-1/2 z-0 hidden md:block"></div>
         
-        <div className="relative z-10 grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4">
+        {/* Dashed Line (Mobile) */}
+        <div className="absolute top-0 left-1/2 w-[2px] h-full border-l-2 border-dashed border-zinc-300 -translate-x-1/2 z-0 block md:hidden"></div>
+        
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-4 gap-12 sm:gap-8 md:gap-4">
           
           {/* Step 1 */}
           <div className="flex justify-center">

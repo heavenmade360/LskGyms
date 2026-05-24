@@ -7,9 +7,9 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#1A1A1A] pt-16 pb-8 rounded-t-[40px] mt-24">
+    <footer className="bg-[#1A1A1A] pt-16 pb-8 rounded-t-[40px] mt-16 md:mt-24">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-2">

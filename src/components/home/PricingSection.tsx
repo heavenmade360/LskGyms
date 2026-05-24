@@ -3,7 +3,7 @@ import { ChevronDown } from "lucide-react";
 export function PricingSection() {
   return (
     <section className="py-24 max-w-[1400px] mx-auto px-4 md:px-8 w-full">
-      <div className="bg-brand-orange rounded-[40px] p-8 md:p-16 relative overflow-hidden">
+      <div className="bg-brand-orange rounded-[40px] p-6 sm:p-8 md:p-16 relative overflow-hidden">
         {/* Abstract Background SVG or Shapes */}
         <div className="absolute inset-0 z-0 pointer-events-none opacity-20 flex items-center justify-center">
           <div className="w-full h-[500px] border-b-[200px] border-l-[200px] border-b-white border-l-transparent rotate-45 transform scale-[2]"></div>
