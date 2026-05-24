@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 
 export function WhatsAppButton() {
-  const phoneNumber = "0765978078";
+  const phoneNumber = "260765978078";
   const message = encodeURIComponent("Hello! I would like to know more about Zambia Fit.");
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 

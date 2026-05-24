@@ -1,5 +1,6 @@
 import { ChevronDown } from "lucide-react";
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 export function PricingSection() {
   return (
@@ -101,15 +102,19 @@ export function PricingSection() {
         </div>
 
         <div className="relative z-10 mt-16 flex justify-end">
-          <motion.button 
+          <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.8 }}
-            className="bg-white hover:bg-zinc-50 text-brand-dark px-12 py-5 rounded-full font-bold transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 tracking-wide"
           >
-            Order Now
-          </motion.button>
+            <Link 
+              to="/memberships"
+              className="inline-block bg-white hover:bg-zinc-50 text-brand-dark px-12 py-5 rounded-full font-bold transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 tracking-wide text-center"
+            >
+              Order Now
+            </Link>
+          </motion.div>
         </div>
 
       </motion.div>

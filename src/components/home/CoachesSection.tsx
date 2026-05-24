@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 export function CoachesSection() {
   return (
@@ -75,15 +76,19 @@ export function CoachesSection() {
           >
             Our team of certified and experienced Zambian trainers is dedicated to helping you achieve your fitness goals. Whether you're looking to build muscle, lose weight, or improve overall health, our trainers will create a personalized plan to guide you every step of the way.
           </motion.p>
-          <motion.button 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="bg-brand-orange hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold transition-all shadow-xl shadow-brand-orange/30 text-sm tracking-wide"
           >
-            Explore More
-          </motion.button>
+            <Link 
+              to="/about"
+              className="inline-block bg-brand-orange hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold transition-all shadow-xl shadow-brand-orange/30 text-sm tracking-wide text-center"
+            >
+              Explore More
+            </Link>
+          </motion.div>
         </div>
 
       </div>

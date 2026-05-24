@@ -1,5 +1,6 @@
 import { ArrowDown, Play } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 export function HeroSection() {
   return (
@@ -44,14 +45,18 @@ export function HeroSection() {
           </motion.p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-6 mt-12 w-full md:w-auto">
-            <motion.button 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-              className="w-full sm:w-auto bg-brand-orange hover:bg-orange-600 text-white px-10 py-5 rounded-full font-bold transition-all shadow-2xl shadow-brand-orange/40 text-base md:text-lg tracking-wide hover:-translate-y-1"
             >
-              Start Journey
-            </motion.button>
+              <Link 
+                to="/memberships"
+                className="inline-block w-full sm:w-auto bg-brand-orange hover:bg-orange-600 text-white px-10 py-5 rounded-full font-bold transition-all shadow-2xl shadow-brand-orange/40 text-base md:text-lg tracking-wide hover:-translate-y-1 text-center"
+              >
+                Start Journey
+              </Link>
+            </motion.div>
 
             {/* Video trigger button */}
             <motion.div 

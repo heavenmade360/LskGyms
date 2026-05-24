@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Play } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const galleryItems = [
   {
@@ -108,9 +109,12 @@ export function Gallery() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-20 flex justify-center"
         >
-          <button className="bg-white hover:bg-zinc-50 text-brand-dark px-12 py-5 rounded-full font-bold transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 tracking-wide">
-            Load More Photos
-          </button>
+          <Link 
+            to="/contact"
+            className="inline-block bg-white hover:bg-zinc-50 text-brand-dark px-12 py-5 rounded-full font-bold transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1 tracking-wide text-center"
+          >
+            Visit Us for More
+          </Link>
         </motion.div>
       </div>
     </div>

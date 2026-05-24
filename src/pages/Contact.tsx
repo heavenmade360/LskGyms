@@ -57,7 +57,7 @@ export function Contact() {
                   <div>
                     <h3 className="text-brand-dark font-bold font-heading uppercase tracking-wider mb-2">Phone</h3>
                     <p className="text-zinc-600 leading-relaxed text-sm">
-                      0765 978 078
+                      +260 765 978 078
                     </p>
                   </div>
                 </div>
