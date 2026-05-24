@@ -1,5 +1,6 @@
 import { ArrowUpRight } from 'lucide-react';
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 
 const classes = [
   {
@@ -60,9 +61,10 @@ export function ClassesSection() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, delay: i * 0.15, ease: "easeOut" }}
             key={cls.title} 
-            className={`group cursor-pointer ${cls.containerClass}`}
+            className={`block group cursor-pointer ${cls.containerClass}`}
           >
-            <div className={`w-full rounded-[40px] overflow-hidden ${cls.className} shadow-xl shadow-zinc-200/50 relative border-4 border-white`}>
+            <Link to="/programs" className="block w-full h-full">
+              <div className={`w-full rounded-[40px] overflow-hidden ${cls.className} shadow-xl shadow-zinc-200/50 relative border-4 border-white`}>
               <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500 z-10" />
               <img 
                 src={cls.image} 
@@ -76,6 +78,7 @@ export function ClassesSection() {
                 <ArrowUpRight className="w-6 h-6" />
               </div>
             </div>
+            </Link>
           </motion.div>
         ))}
       </div>

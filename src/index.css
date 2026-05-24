@@ -9,6 +9,6 @@
   --color-brand-dark: #111111;
 }
 
-body {
-  @apply bg-white text-zinc-900 antialiased;
+body, html {
+  @apply bg-white text-zinc-900 antialiased overflow-x-hidden max-w-full;
 }

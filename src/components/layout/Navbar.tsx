@@ -55,9 +55,9 @@ export function Navbar() {
             >
               Contact Us
             </Link>
-            <div className="w-12 h-12 rounded-full bg-brand-orange flex items-center justify-center text-white cursor-pointer hover:bg-orange-600 transition-colors">
+            <Link to="/memberships" className="w-12 h-12 rounded-full bg-brand-orange flex items-center justify-center text-white cursor-pointer hover:bg-orange-600 transition-colors">
               <User className="w-5 h-5" />
-            </div>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}

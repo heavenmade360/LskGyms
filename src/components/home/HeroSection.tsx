@@ -32,7 +32,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
             className="text-6xl sm:text-7xl md:text-[90px] lg:text-[120px] font-heading font-black leading-[0.85] text-white tracking-tighter drop-shadow-2xl uppercase"
           >
-            No Pain<br className="hidden md:block" /> No Gain
+            No Pain<br /> No Gain
           </motion.h1>
 
           <motion.p 
@@ -63,12 +63,16 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-              className="flex items-center justify-center gap-4 cursor-pointer group"
             >
-               <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/20 group-hover:scale-110 group-hover:bg-white group-hover:text-brand-dark transition-all duration-300 shadow-xl">
-                  <Play className="w-6 h-6 ml-1" fill="currentColor" />
-               </div>
-               <span className="font-bold text-white uppercase tracking-widest text-sm whitespace-nowrap">Watch Video</span>
+              <Link 
+                to="/gallery"
+                className="flex items-center justify-center gap-4 cursor-pointer group"
+              >
+                 <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/20 group-hover:scale-110 group-hover:bg-white group-hover:text-brand-dark transition-all duration-300 shadow-xl">
+                    <Play className="w-6 h-6 ml-1" fill="currentColor" />
+                 </div>
+                 <span className="font-bold text-white uppercase tracking-widest text-sm whitespace-nowrap">Watch Video</span>
+              </Link>
             </motion.div>
           </div>
           
