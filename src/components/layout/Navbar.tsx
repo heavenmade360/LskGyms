@@ -7,7 +7,7 @@ const links = [
   { name: 'Home', path: '/' },
   { name: 'Membership', path: '/memberships' },
   { name: 'About', path: '/about' },
-  { name: 'Blog', path: '/blog' },
+  { name: 'Gallery', path: '/gallery' },
 ];
 
 export function Navbar() {
