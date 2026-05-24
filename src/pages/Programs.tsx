@@ -42,28 +42,28 @@ const programs = [
 
 export function Programs() {
   return (
-    <div className="flex flex-col">
-      <div className="bg-zinc-900 border-b border-white/5 py-24 relative overflow-hidden">
+    <div className="flex flex-col bg-white">
+      <div className="bg-brand-gray border-b border-zinc-100 py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl sm:text-7xl font-black uppercase tracking-tighter text-white mb-6"
+            className="text-5xl sm:text-7xl font-heading font-black uppercase tracking-tighter text-brand-dark mb-6"
           >
-            Our <span className="text-red-500">Programs</span>
+            Our <span className="text-brand-orange">Programs</span>
           </motion.h1>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
-            className="text-xl text-zinc-400 max-w-2xl mx-auto"
+            className="text-xl text-zinc-600 max-w-2xl mx-auto"
           >
             Everything you need to transform. Expertly designed spaces and sessions tailored to every fitness level.
           </motion.p>
         </div>
       </div>
 
-      <div className="py-24 bg-zinc-950">
+      <div className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {programs.map((program, i) => {
@@ -75,7 +75,7 @@ export function Programs() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                   key={program.title}
-                  className="bg-zinc-900 border border-white/5 rounded-2xl overflow-hidden group hover:border-red-500/30 transition-colors"
+                  className="bg-zinc-50 border border-zinc-200 rounded-2xl overflow-hidden group hover:border-brand-orange/30 hover:shadow-xl transition-all"
                 >
                   <div className="h-48 relative overflow-hidden">
                     <img 
@@ -83,14 +83,13 @@ export function Programs() {
                       alt={program.title} 
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 to-transparent" />
                   </div>
                   <div className="p-8 relative">
-                    <div className="absolute -top-10 right-8 w-14 h-14 bg-zinc-950 border border-white/10 rounded-xl flex items-center justify-center text-red-500 shadow-xl group-hover:bg-red-600 group-hover:text-white transition-colors duration-300">
+                    <div className="absolute -top-10 right-8 w-14 h-14 bg-white border border-zinc-100 rounded-xl flex items-center justify-center text-brand-orange shadow-lg group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
                       <Icon className="w-7 h-7" />
                     </div>
-                    <h3 className="text-2xl font-bold text-white uppercase tracking-wider mb-3">{program.title}</h3>
-                    <p className="text-zinc-400 leading-relaxed text-sm">
+                    <h3 className="text-2xl font-bold font-heading text-brand-dark uppercase tracking-wider mb-3">{program.title}</h3>
+                    <p className="text-zinc-600 leading-relaxed text-sm">
                       {program.description}
                     </p>
                   </div>
