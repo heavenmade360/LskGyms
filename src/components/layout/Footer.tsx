@@ -32,7 +32,7 @@ export function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-6">Menu</h3>
             <ul className="space-y-3">
-              {['Home', 'Membership', 'About', 'Programs'].map((item) => (
+              {['Home', 'Membership', 'About', 'Blog'].map((item) => (
                 <li key={item}>
                   <Link to={`/${item === 'Home' ? '' : item.toLowerCase()}`} className="text-zinc-400 hover:text-brand-orange transition-colors text-sm">
                     {item}
