@@ -1,54 +1,67 @@
 import { ClipboardList, Dumbbell, Moon, Target } from "lucide-react";
+import { motion } from 'motion/react';
 
 export function ProcessSection() {
+  const steps = [
+    { icon: ClipboardList, active: false },
+    { icon: Dumbbell, active: true },
+    { icon: Moon, active: false },
+    { icon: Target, active: false },
+  ];
+
   return (
-    <section className="py-24 max-w-[1400px] mx-auto px-4 md:px-8 w-full">
-      <div className="grid md:grid-cols-2 gap-8 items-end mb-16">
-        <div>
-          <h3 className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-2">Come to a result</h3>
-          <h2 className="text-5xl md:text-6xl font-heading font-black uppercase tracking-tighter text-brand-dark">With Us</h2>
-        </div>
-        <p className="text-zinc-600 text-lg md:text-xl font-medium max-w-sm mb-2">
+    <section className="py-32 md:py-40 max-w-[1400px] mx-auto px-4 md:px-8 w-full">
+      <div className="grid md:grid-cols-2 gap-8 items-end mb-20 md:mb-32">
+        <motion.div
+           initial={{ opacity: 0, x: -50 }}
+           whileInView={{ opacity: 1, x: 0 }}
+           viewport={{ once: true, margin: "-100px" }}
+           transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <h3 className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-4">Come to a result</h3>
+          <h2 className="text-5xl md:text-7xl font-heading font-black uppercase tracking-tighter text-brand-dark">With Us</h2>
+        </motion.div>
+        <motion.p 
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          className="text-zinc-600 text-xl md:text-2xl font-medium max-w-md mb-2 leading-relaxed"
+        >
           Ready to take the first step towards a healthier, stronger you?
-        </p>
+        </motion.p>
       </div>
 
       <div className="relative mt-16 md:mt-24 max-w-5xl mx-auto">
         {/* Dashed Line (Desktop) */}
-        <div className="absolute top-1/2 left-0 w-full h-[2px] border-t-2 border-dashed border-zinc-300 -translate-y-1/2 z-0 hidden md:block"></div>
+        <div className="absolute top-1/2 left-0 w-full h-[2px] border-t-[3px] border-dashed border-zinc-200 -translate-y-1/2 z-0 hidden md:block"></div>
         
         {/* Dashed Line (Mobile) */}
-        <div className="absolute top-0 left-1/2 w-[2px] h-full border-l-2 border-dashed border-zinc-300 -translate-x-1/2 z-0 block md:hidden"></div>
+        <div className="absolute top-0 left-1/2 w-[2px] h-full border-l-[3px] border-dashed border-zinc-200 -translate-x-1/2 z-0 block md:hidden"></div>
         
         <div className="relative z-10 grid grid-cols-1 md:grid-cols-4 gap-12 sm:gap-8 md:gap-4">
           
-          {/* Step 1 */}
-          <div className="flex justify-center">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border border-zinc-200 bg-white flex items-center justify-center text-brand-dark shadow-sm">
-              <ClipboardList className="w-10 h-10 stroke-[1.5]" />
-            </div>
-          </div>
-
-          {/* Step 2 (Active) */}
-          <div className="flex justify-center">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-brand-dark flex items-center justify-center text-white shadow-xl scale-110">
-              <Dumbbell className="w-10 h-10 stroke-[1.5]" />
-            </div>
-          </div>
-
-          {/* Step 3 */}
-          <div className="flex justify-center">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border border-zinc-200 bg-white flex items-center justify-center text-brand-dark shadow-sm">
-              <Moon className="w-10 h-10 stroke-[1.5]" />
-            </div>
-          </div>
-
-          {/* Step 4 */}
-          <div className="flex justify-center">
-            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full border border-zinc-200 bg-white flex items-center justify-center text-brand-dark shadow-sm">
-              <Target className="w-10 h-10 stroke-[1.5]" />
-            </div>
-          </div>
+          {steps.map((step, index) => {
+            const Icon = step.icon;
+            return (
+              <motion.div 
+                key={index}
+                initial={{ opacity: 0, scale: 0.5, y: 50 }}
+                whileInView={{ opacity: 1, scale: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.6, delay: index * 0.2, type: "spring", stiffness: 100 }}
+                className="flex justify-center"
+              >
+                <div className={`w-32 h-32 md:w-44 md:h-44 rounded-full flex items-center justify-center transition-all duration-500 hover:scale-105 cursor-pointer ${
+                  step.active 
+                    ? "bg-brand-dark text-white shadow-2xl shadow-brand-dark/20 border-8 border-white scale-110 md:scale-110" 
+                    : "border-[6px] border-white bg-zinc-50 text-zinc-400 hover:text-brand-dark hover:border-zinc-100 shadow-xl"
+                }`}>
+                  <Icon className="w-12 h-12 md:w-14 md:h-14 stroke-[1.5]" />
+                </div>
+              </motion.div>
+            );
+          })}
 
         </div>
       </div>
