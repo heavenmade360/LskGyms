@@ -1,0 +1,6 @@
+{
+  "name": "Fitness Elite",
+  "description": "A premium, multi-page gym and fitness center website.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
