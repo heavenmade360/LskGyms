@@ -61,7 +61,7 @@ export function Footer() {
               <li className="text-zinc-400 text-sm">Sat – Sun: 6:00 – 18:00</li>
             </ul>
             <h3 className="text-white font-semibold mb-3">New Schedule?</h3>
-            <p className="text-zinc-400 text-sm">+260 97 123 4567</p>
+            <p className="text-zinc-400 text-sm">0765 978 078</p>
           </div>
         </div>
 
