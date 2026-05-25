@@ -28,7 +28,7 @@ export function About() {
               <h2 className="text-4xl md:text-5xl font-heading font-black uppercase tracking-tighter text-brand-dark mb-8">Our Story</h2>
               <div className="space-y-6 text-zinc-600 text-lg leading-loose">
                 <p>
-                  Established with a vision to revolutionize fitness in Zambia, Zambia's Fitness Gym has grown to become the most trusted name in health and wellness in Lusaka. For over 10 years, we have been helping individuals from all walks of life achieve their physical and mental goals.
+                  Established with a vision to revolutionize fitness in the region, Gladiator Fitness has grown to become the most trusted name in health and wellness in Lusaka. For over 10 years, we have been helping individuals from all walks of life achieve their physical and mental goals.
                 </p>
                 <p>
                   We believe that fitness should be accessible, effective, and community-driven. That's why we've invested in massive, fully air-conditioned spaces across Lusaka, Kitwe, and Ndola, outfitted with the best Life Fitness machinery. 
@@ -48,7 +48,7 @@ export function About() {
 
           <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
             {[
-              { icon: Target, title: "Our Mission", desc: "To provide Zambians with an unmatched fitness environment where ambition meets expert guidance, empowering every member across the nation to live stronger." },
+              { icon: Target, title: "Our Mission", desc: "To provide our members with an unmatched fitness environment where ambition meets expert guidance, empowering every member across the nation to live stronger." },
               { icon: Trophy, title: "Elite Equipment", desc: "We exclusively use Life Fitness equipment, globally recognized for its biomechanics, durability, and smooth performance." },
               { icon: Clock, title: "Flexible access", desc: "Open 7 days a week with extended weekday hours to ensure your schedule never stands in the way of your workout." }
             ].map((feature, i) => {

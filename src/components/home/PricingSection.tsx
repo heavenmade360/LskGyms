@@ -42,7 +42,7 @@ export function PricingSection() {
              <h3 className="text-3xl font-black font-heading tracking-tight uppercase mb-8 leading-none">One Day<br/>Pass</h3>
              <h4 className="text-3xl font-bold mb-6">ZMW 150 <span className="text-base font-normal tracking-wide text-white/80">/day</span></h4>
              <p className="text-white/80 text-sm md:text-base leading-relaxed mb-4">
-               Whether you're visiting Lusaka on business or are just taking your personal fitness one day at a time, we'd like to invite you to experience all that ZAMBIA FIT has to offer. You are always Welcome!
+               Whether you're visiting Lusaka on business or are just taking your personal fitness one day at a time, we'd like to invite you to experience all that GLADIATOR FITNESS has to offer. You are always Welcome!
              </p>
           </div>
 
@@ -56,7 +56,7 @@ export function PricingSection() {
              <h3 className="text-3xl font-black font-heading tracking-tight uppercase mb-8 leading-none">Monthly<br/>Pass</h3>
              <h4 className="text-3xl font-bold mb-6">ZMW 1,200 <span className="text-base font-normal text-zinc-500 tracking-wide">/month</span></h4>
              <p className="text-zinc-600 text-sm md:text-base leading-relaxed mb-4">
-               Our monthly membership helps you to keep your fitness goals on track without a commitment of any kind, while still enjoying all of the amenities that ZAMBIA FIT has to offer.
+               Our monthly membership helps you to keep your fitness goals on track without a commitment of any kind, while still enjoying all of the amenities that GLADIATOR FITNESS has to offer.
              </p>
           </div>
 

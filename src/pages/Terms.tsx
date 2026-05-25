@@ -13,7 +13,7 @@ export function Terms() {
           className="prose prose-zinc max-w-none text-zinc-600 leading-relaxed space-y-6"
         >
           <p>
-            By accessing or using the services provided by ZAMBIA FIT, you agree to be bound by the following Terms of Service. Please read them carefully.
+            By accessing or using the services provided by GLADIATOR FITNESS, you agree to be bound by the following Terms of Service. Please read them carefully.
           </p>
           
           <h2 className="text-2xl font-bold text-brand-dark mt-8 mb-4">1. Membership and Access</h2>
@@ -23,12 +23,12 @@ export function Terms() {
           
           <h2 className="text-2xl font-bold text-brand-dark mt-8 mb-4">2. Facility Rules</h2>
           <p>
-            Members must wipe down equipment after use, return weights to their proper racks, and wear appropriate athletic attire and closed-toe shoes at all times. ZAMBIA FIT is not responsible for lost, stolen, or damaged personal property.
+            Members must wipe down equipment after use, return weights to their proper racks, and wear appropriate athletic attire and closed-toe shoes at all times. GLADIATOR FITNESS is not responsible for lost, stolen, or damaged personal property.
           </p>
           
           <h2 className="text-2xl font-bold text-brand-dark mt-8 mb-4">3. Health and Safety</h2>
           <p>
-            Consult your physician before beginning any exercise program. By using our facility, you acknowledge the inherent risks associated with physical exercise and agree to hold ZAMBIA FIT harmless from liability for any injuries sustained.
+            Consult your physician before beginning any exercise program. By using our facility, you acknowledge the inherent risks associated with physical exercise and agree to hold GLADIATOR FITNESS harmless from liability for any injuries sustained.
           </p>
           
           <h2 className="text-2xl font-bold text-brand-dark mt-8 mb-4">4. Billing and Cancellation</h2>

@@ -40,7 +40,7 @@ export function CoachesSection() {
           <p 
             className="text-zinc-600 text-lg leading-relaxed mb-10 max-w-lg"
           >
-            Our team of certified and experienced Zambian trainers is dedicated to helping you achieve your fitness goals. Whether you're looking to build muscle, lose weight, or improve overall health, our trainers will create a personalized plan to guide you every step of the way.
+            Our team of certified and experienced professional trainers is dedicated to helping you achieve your fitness goals. Whether you're looking to build muscle, lose weight, or improve overall health, our trainers will create a personalized plan to guide you every step of the way.
           </p>
           <div>
             <Link 

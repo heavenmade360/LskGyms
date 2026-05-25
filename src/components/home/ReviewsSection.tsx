@@ -4,11 +4,11 @@ import { useState } from "react";
 const reviews = [
   {
     name: "Emily H.",
-    text: "I've been a member of ZAMBIA FIT for over a year, and I can't imagine my fitness routine without it. The group classes are my favorite – they're challenging, fun, and led by enthusiastic instructors."
+    text: "I've been a member of GLADIATOR FITNESS for over a year, and I can't imagine my fitness routine without it. The group classes are my favorite – they're challenging, fun, and led by enthusiastic instructors."
   },
   {
     name: "Alexandra T.",
-    text: "Joining ZAMBIA FIT was the best decision I made for my fitness journey. The trainers are so supportive and knowledgeable. The community here is incredible."
+    text: "Joining GLADIATOR FITNESS was the best decision I made for my fitness journey. The trainers are so supportive and knowledgeable. The community here is incredible."
   },
   {
     name: "Michael R.",

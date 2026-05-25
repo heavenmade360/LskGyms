@@ -12,19 +12,16 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-2">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-brand-orange">
-                <path d="M16 0L32 16L16 32L0 16L16 0Z" fill="currentColor"/>
-                <path d="M16 8L24 16L16 24L8 16L16 8Z" fill="black"/>
-              </svg>
+            <Link to="/" className="flex items-center gap-3">
+              <img src="/logo.png" alt="Gladiator Fitness Logo" className="h-10 w-auto object-contain brightness-0 invert" />
               <span className="text-2xl font-heading font-black tracking-tighter text-white uppercase">
-                ZAMBIA FIT
+                GLADIATOR FITNESS
               </span>
             </Link>
             <p className="text-zinc-400 text-sm leading-relaxed">
               Plot 1234, Great East Road<br/>
               Arcades Area, Lusaka, Zambia<br/>
-              info@zambiasfitness.co.zm
+              info@gladiatorfitness.com
             </p>
           </div>
 
@@ -79,7 +76,7 @@ export function Footer() {
           </div>
           
           <p className="text-zinc-500 text-xs">
-            Copyright © ZAMBIA FIT. All Rights Reserved.
+            Copyright © GLADIATOR FITNESS. All Rights Reserved.
           </p>
 
           <button onClick={scrollToTop} className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-brand-dark hover:bg-brand-orange hover:text-white transition-colors">

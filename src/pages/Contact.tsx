@@ -53,7 +53,7 @@ export function Contact() {
                   <div>
                     <h3 className="text-brand-dark font-bold font-heading uppercase tracking-wider mb-2">Location</h3>
                     <p className="text-zinc-600 leading-relaxed text-sm">
-                      Zambia's Fitness Gym<br/>
+                      Gladiator Fitness<br/>
                       Plot 1234, Great East Road<br/>
                       Arcades Area, Lusaka, Zambia
                     </p>
@@ -79,7 +79,7 @@ export function Contact() {
                   <div>
                     <h3 className="text-brand-dark font-bold font-heading uppercase tracking-wider mb-2">Email</h3>
                     <p className="text-zinc-600 leading-relaxed text-sm">
-                      info@zambiasfitness.co.zm
+                      info@gladiatorfitness.com
                     </p>
                   </div>
                 </div>
