@@ -21,7 +21,7 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center gap-2">
             <Link to="/" className="flex items-center gap-3 group">
-              <img src="/logo.png" alt="Gladiator Fitness Logo" className="h-12 w-auto object-contain" />
+              <img src="/images (2).png" alt="Gladiator Fitness Logo" className="h-12 w-auto object-contain" />
               <span className="hidden sm:block text-2xl font-heading font-black tracking-tighter text-brand-dark uppercase">
                 GLADIATOR FITNESS
               </span>

@@ -13,7 +13,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-3">
-              <img src="/logo.png" alt="Gladiator Fitness Logo" className="h-10 w-auto object-contain brightness-0 invert" />
+              <img src="/images (2).png" alt="Gladiator Fitness Logo" className="h-10 w-auto object-contain brightness-0 invert" />
               <span className="text-2xl font-heading font-black tracking-tighter text-white uppercase">
                 GLADIATOR FITNESS
               </span>
