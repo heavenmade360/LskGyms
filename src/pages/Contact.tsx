@@ -1,7 +1,23 @@
-import { motion } from 'motion/react';
-import { MapPin, Phone, Mail, Clock, ArrowRight } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+import { MapPin, Phone, Mail, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
+import React, { useState } from 'react';
 
 export function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    // Simulate network delay
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setIsSuccess(true);
+      // Reset after 3 seconds
+      setTimeout(() => setIsSuccess(false), 3000);
+    }, 1000);
+  };
+
   return (
     <div className="flex flex-col bg-white">
       <div className="bg-brand-gray border-b border-zinc-100 py-24 relative overflow-hidden">
@@ -100,14 +116,30 @@ export function Contact() {
             </div>
 
             {/* Form */}
-            <div className="bg-brand-gray border border-zinc-200 rounded-3xl p-8 lg:p-12">
+            <div className="bg-brand-gray border border-zinc-200 rounded-3xl p-8 lg:p-12 relative overflow-hidden">
+              <AnimatePresence>
+                {isSuccess && (
+                  <motion.div 
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="absolute inset-0 bg-white/90 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-8"
+                  >
+                    <CheckCircle2 className="w-16 h-16 text-green-500 mb-4" />
+                    <h4 className="text-2xl font-bold font-heading text-brand-dark mb-2">Message Sent!</h4>
+                    <p className="text-zinc-600">We'll get back to you as soon as possible.</p>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+
               <h3 className="text-2xl font-black font-heading uppercase tracking-wider text-brand-dark mb-8">Send a Message</h3>
-              <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+              <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <label className="text-xs font-bold uppercase tracking-widest text-zinc-500">First Name</label>
                     <input 
                       type="text" 
+                      required
                       className="w-full bg-white border border-zinc-200 rounded-xl px-4 py-3 text-brand-dark focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors"
                       placeholder="John"
                     />
@@ -116,6 +148,7 @@ export function Contact() {
                     <label className="text-xs font-bold uppercase tracking-widest text-zinc-500">Last Name</label>
                     <input 
                       type="text" 
+                      required
                       className="w-full bg-white border border-zinc-200 rounded-xl px-4 py-3 text-brand-dark focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors"
                       placeholder="Doe"
                     />
@@ -126,6 +159,7 @@ export function Contact() {
                   <label className="text-xs font-bold uppercase tracking-widest text-zinc-500">Email Address</label>
                   <input 
                     type="email" 
+                    required
                     className="w-full bg-white border border-zinc-200 rounded-xl px-4 py-3 text-brand-dark focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors"
                     placeholder="john@example.com"
                   />
@@ -135,16 +169,19 @@ export function Contact() {
                   <label className="text-xs font-bold uppercase tracking-widest text-zinc-500">How can we help?</label>
                   <textarea 
                     rows={4}
+                    required
                     className="w-full bg-white border border-zinc-200 rounded-xl px-4 py-3 text-brand-dark focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors resize-none"
                     placeholder="I'm interested in personal training..."
                   />
                 </div>
 
                 <button 
-                  className="w-full bg-brand-orange hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-2 group"
+                  disabled={isSubmitting}
+                  type="submit"
+                  className="w-full bg-brand-orange hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  Send Message
-                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                  {!isSubmitting && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}
                 </button>
               </form>
             </div>

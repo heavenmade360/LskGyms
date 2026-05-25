@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, User } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -54,9 +54,6 @@ export function Navbar() {
               className="bg-brand-dark hover:bg-black text-white px-7 py-3 rounded-full font-medium text-sm transition-all"
             >
               Contact Us
-            </Link>
-            <Link to="/memberships" className="w-12 h-12 rounded-full bg-brand-orange flex items-center justify-center text-white cursor-pointer hover:bg-orange-600 transition-colors">
-              <User className="w-5 h-5" />
             </Link>
           </div>
 

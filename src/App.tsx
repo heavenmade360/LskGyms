@@ -11,6 +11,9 @@ import { Programs } from './pages/Programs';
 import { Memberships } from './pages/Memberships';
 import { Contact } from './pages/Contact';
 import { Gallery } from './pages/Gallery';
+import { NotFound } from './pages/NotFound';
+import { PrivacyPolicy } from './pages/PrivacyPolicy';
+import { Terms } from './pages/Terms';
 
 export default function App() {
   return (
@@ -23,6 +26,9 @@ export default function App() {
           <Route path="memberships" element={<Memberships />} />
           <Route path="gallery" element={<Gallery />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="privacy" element={<PrivacyPolicy />} />
+          <Route path="terms" element={<Terms />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </Router>

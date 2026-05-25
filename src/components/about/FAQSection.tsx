@@ -33,7 +33,7 @@ export function FAQSection() {
   };
 
   return (
-    <section className="py-32 md:py-40 bg-zinc-50 border-t border-zinc-100">
+    <section id="faq" className="py-32 md:py-40 bg-zinc-50 border-t border-zinc-100">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20 md:mb-24">
           <motion.h2 

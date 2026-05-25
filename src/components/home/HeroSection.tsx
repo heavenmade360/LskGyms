@@ -100,8 +100,11 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
           className="absolute bottom-12 right-4 md:right-12 flex flex-col items-center gap-4 z-20 hidden lg:flex"
         >
-          <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-300 writing-vertical-rl mb-2">Scroll</span>
-          <div className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center shadow-xl hover:-translate-y-2 transition-transform cursor-pointer border border-white/20 text-white">
+          <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-300 writing-vertical-rl mb-2" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
+          <div 
+            onClick={() => window.scrollBy({ top: window.innerHeight, behavior: 'smooth' })}
+            className="w-14 h-14 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center shadow-xl hover:-translate-y-2 transition-transform cursor-pointer border border-white/20 text-white"
+          >
             <ArrowDown className="w-6 h-6" />
           </div>
         </motion.div>

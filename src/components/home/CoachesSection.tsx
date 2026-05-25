@@ -6,45 +6,28 @@ export function CoachesSection() {
     <section className="py-32 md:py-40 max-w-[1400px] mx-auto px-4 md:px-8 w-full overflow-hidden">
       <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
         
-        {/* Images */}
+        {/* Image */}
         <motion.div 
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1, ease: "easeOut" }}
-          className="relative h-[350px] sm:h-[450px] md:h-[600px] w-full"
+          className="relative h-[350px] sm:h-[450px] md:h-[600px] w-full bg-zinc-100 rounded-[48px] overflow-hidden shadow-2xl"
         >
-          {/* Orange Background Block with single coach */}
-          <div className="absolute left-0 bottom-0 w-[70%] h-[80%] bg-brand-orange rounded-[48px] overflow-hidden flex items-end justify-center shadow-2xl">
-             <img 
-              src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=400&auto=format&fit=crop" 
-              className="w-full h-full object-cover mix-blend-overlay opacity-50 hover:scale-105 transition-transform duration-1000" 
-              alt="Coach silhouette" 
-             />
-             {/* Play button overlay */}
-             <div className="absolute inset-0 flex flex-col justify-center items-center">
-                <div className="w-16 h-16 bg-white/90 backdrop-blur rounded-full flex items-center justify-center text-brand-dark shadow-xl hover:scale-110 transition-transform cursor-pointer">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="ml-1">
-                    <path d="M8 5V19L19 12L8 5Z" />
-                  </svg>
-                </div>
-             </div>
+          <img 
+            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=1200&auto=format&fit=crop" 
+            className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" 
+            alt="Gym Member" 
+          />
+          <div className="absolute inset-x-0 bottom-0 min-h-[30%] bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+           {/* Play button overlay */}
+          <div className="absolute inset-0 flex flex-col justify-center items-center">
+            <Link to="/gallery" className="w-16 h-16 bg-brand-orange/90 backdrop-blur rounded-full flex items-center justify-center text-white shadow-xl hover:scale-110 hover:bg-brand-orange transition-all cursor-pointer">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="ml-1">
+                <path d="M8 5V19L19 12L8 5Z" />
+              </svg>
+            </Link>
           </div>
-          
-          {/* Gray Background Block with couple/coaches */}
-          <motion.div 
-             initial={{ opacity: 0, y: 50 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true, margin: "-100px" }}
-             transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
-             className="absolute right-0 top-0 w-[65%] h-[75%] bg-[#EBEBEB] rounded-[48px] overflow-hidden border-[8px] border-white shadow-2xl z-10"
-          >
-             <img 
-              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=600&auto=format&fit=crop" 
-              className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000" 
-              alt="Coaches" 
-             />
-          </motion.div>
         </motion.div>
 
         {/* Text Details */}

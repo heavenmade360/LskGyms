@@ -1,7 +1,35 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
+import { useState } from "react";
+
+const reviews = [
+  {
+    name: "Emily H.",
+    text: "I've been a member of ZAMBIA FIT for over a year, and I can't imagine my fitness routine without it. The group classes are my favorite – they're challenging, fun, and led by enthusiastic instructors."
+  },
+  {
+    name: "Alexandra T.",
+    text: "Joining ZAMBIA FIT was the best decision I made for my fitness journey. The trainers are so supportive and knowledgeable. The community here is incredible."
+  },
+  {
+    name: "Michael R.",
+    text: "The facilities are top-notch and always clean. I really appreciate the 24/7 access option and the variety of equipment available. Best gym in Lusaka by far!"
+  }
+];
 
 export function ReviewsSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextReview = () => {
+    setCurrentIndex((prev) => (prev + 1) % reviews.length);
+  };
+
+  const prevReview = () => {
+    setCurrentIndex((prev) => (prev - 1 + reviews.length) % reviews.length);
+  };
+
+  const nextIndex = (currentIndex + 1) % reviews.length;
+
   return (
     <section className="py-32 md:py-40 max-w-[1400px] mx-auto px-4 md:px-8 w-full overflow-hidden">
       <div className="mb-20 md:mb-24">
@@ -69,43 +97,42 @@ export function ReviewsSection() {
 
         {/* Reviews Carousel */}
         <div>
-           <div className="flex flex-col md:flex-row gap-8 mb-12">
+           <div className="flex flex-col md:flex-row gap-8 mb-12 relative min-h-[250px]">
              
              {/* Review Card 1 */}
-             <motion.div 
-               initial={{ opacity: 0, y: 30 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               viewport={{ once: true, margin: "-100px" }}
-               transition={{ duration: 0.6, delay: 0.4 }}
-               className="flex-1 bg-white border border-zinc-100 rounded-[40px] p-8 md:p-10 shadow-xl shadow-zinc-200/50"
-             >
-               <div className="flex justify-between items-start mb-8">
-                  <div className="border border-brand-dark rounded-full px-6 py-2 shadow-sm">
-                    <span className="font-semibold text-brand-dark tracking-wide">Emily H.</span>
-                  </div>
-                  <div className="text-brand-orange text-5xl font-serif font-black leading-none opacity-50">"</div>
-               </div>
-               <p className="text-zinc-600 text-base md:text-lg leading-relaxed">
-                 I've been a member of ZAMBIA FIT for over a year, and I can't imagine my fitness routine without it. The group classes are my favorite – they're challenging, fun, and led by enthusiastic instructors.
-               </p>
-             </motion.div>
+             <AnimatePresence mode="wait">
+               <motion.div 
+                 key={currentIndex}
+                 initial={{ opacity: 0, y: 10 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 exit={{ opacity: 0, y: -10 }}
+                 transition={{ duration: 0.4 }}
+                 className="flex-1 bg-white border border-zinc-100 rounded-[40px] p-8 md:p-10 shadow-xl shadow-zinc-200/50 relative z-20"
+               >
+                 <div className="flex justify-between items-start mb-8">
+                    <div className="border border-brand-dark rounded-full px-6 py-2 shadow-sm">
+                      <span className="font-semibold text-brand-dark tracking-wide">{reviews[currentIndex].name}</span>
+                    </div>
+                    <div className="text-brand-orange text-5xl font-serif font-black leading-none opacity-50">"</div>
+                 </div>
+                 <p className="text-zinc-600 text-base md:text-lg leading-relaxed">
+                   {reviews[currentIndex].text}
+                 </p>
+               </motion.div>
+             </AnimatePresence>
 
              {/* Review Card 2 (Faded/Next) */}
              <motion.div 
-               initial={{ opacity: 0, x: 30 }}
-               whileInView={{ opacity: 1, x: 0 }}
-               viewport={{ once: true, margin: "-100px" }}
-               transition={{ duration: 0.6, delay: 0.5 }}
-               className="flex-1 bg-white border border-zinc-100 rounded-[40px] p-8 md:p-10 shadow-sm opacity-40 hidden md:block scale-95 origin-left"
+               className="flex-1 bg-white border border-zinc-100 rounded-[40px] p-8 md:p-10 shadow-sm opacity-40 hidden md:block scale-95 origin-left absolute -right-32 top-0 bottom-0 w-full z-10 pointer-events-none"
              >
                <div className="flex justify-between items-start mb-8">
                   <div className="border border-zinc-300 rounded-full px-6 py-2">
-                    <span className="font-semibold text-zinc-400 tracking-wide">Alexandra T.</span>
+                    <span className="font-semibold text-zinc-400 tracking-wide">{reviews[nextIndex].name}</span>
                   </div>
                   <div className="text-zinc-300 text-5xl font-serif font-black leading-none">"</div>
                </div>
                <p className="text-zinc-400 text-base md:text-lg leading-relaxed">
-                 Joining ZAMBIA FIT was the best decision I made for my fitness journey. The trainers are so supportive and knowledgeable. The community here is incredible.
+                 {reviews[nextIndex].text}
                </p>
              </motion.div>
 
@@ -117,12 +144,18 @@ export function ReviewsSection() {
              whileInView={{ opacity: 1 }}
              viewport={{ once: true, margin: "-100px" }}
              transition={{ duration: 0.6, delay: 0.6 }}
-             className="flex items-center gap-4 px-4"
+             className="flex items-center gap-4 px-4 mt-8"
            >
-             <button className="w-14 h-14 rounded-full bg-brand-dark flex items-center justify-center text-white hover:bg-black hover:scale-105 transition-all shadow-lg hover:shadow-xl">
+             <button 
+               onClick={prevReview}
+               className="w-14 h-14 rounded-full bg-brand-dark flex items-center justify-center text-white hover:bg-black hover:scale-105 transition-all shadow-lg hover:shadow-xl"
+             >
                <ArrowLeft className="w-6 h-6" />
              </button>
-             <button className="w-14 h-14 rounded-full border-2 border-zinc-200 bg-white flex items-center justify-center text-brand-dark hover:bg-zinc-50 hover:border-zinc-300 hover:scale-105 transition-all shadow-sm">
+             <button 
+               onClick={nextReview}
+               className="w-14 h-14 rounded-full border-2 border-zinc-200 bg-white flex items-center justify-center text-brand-dark hover:bg-zinc-50 hover:border-zinc-300 hover:scale-105 transition-all shadow-sm"
+             >
                <ArrowRight className="w-6 h-6" />
              </button>
            </motion.div>

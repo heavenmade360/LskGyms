@@ -34,7 +34,7 @@ export function Footer() {
             <ul className="space-y-3">
               {['Home', 'Membership', 'About', 'Gallery'].map((item) => (
                 <li key={item}>
-                  <Link to={`/${item === 'Home' ? '' : item.toLowerCase()}`} className="text-zinc-400 hover:text-brand-orange transition-colors text-sm">
+                  <Link to={`/${item === 'Home' ? '' : item === 'Membership' ? 'memberships' : item.toLowerCase()}`} className="text-zinc-400 hover:text-brand-orange transition-colors text-sm">
                     {item}
                   </Link>
                 </li>
@@ -47,9 +47,9 @@ export function Footer() {
             <h3 className="text-white font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
               <li><Link to="/contact" className="text-zinc-400 hover:text-brand-orange transition-colors text-sm">Contact Us</Link></li>
-              <li><a href="#" className="text-zinc-400 hover:text-brand-orange transition-colors text-sm">Login</a></li>
-              <li><a href="#" className="text-zinc-400 hover:text-brand-orange transition-colors text-sm">Register</a></li>
-              <li><a href="#" className="text-zinc-400 hover:text-brand-orange transition-colors text-sm">Privacy Policy</a></li>
+              <li><Link to="/terms" className="text-zinc-400 hover:text-brand-orange transition-colors text-sm">Terms of Service</Link></li>
+              <li><Link to="/privacy" className="text-zinc-400 hover:text-brand-orange transition-colors text-sm">Privacy Policy</Link></li>
+              <li><Link to="/about#faq" className="text-zinc-400 hover:text-brand-orange transition-colors text-sm">FAQ</Link></li>
             </ul>
           </div>
 
@@ -67,13 +67,13 @@ export function Footer() {
 
         <div className="border-t border-zinc-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex space-x-4">
-            <a href="#" className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-colors">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-colors">
               <Facebook className="w-4 h-4" />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-colors">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-colors">
               <Twitter className="w-4 h-4" />
             </a>
-            <a href="#" className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-colors">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-colors">
               <Instagram className="w-4 h-4" />
             </a>
           </div>
