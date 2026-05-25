@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { Dumbbell, HeartPulse, PersonStanding, Flame, Users, Activity } from 'lucide-react';
 
 const programs = [
@@ -45,21 +44,16 @@ export function Programs() {
     <div className="flex flex-col bg-white">
       <div className="bg-brand-gray border-b border-zinc-100 py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <h1 
             className="text-5xl sm:text-7xl font-heading font-black uppercase tracking-tighter text-brand-dark mb-6"
           >
             Our <span className="text-brand-orange">Programs</span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+          </h1>
+          <p 
             className="text-xl text-zinc-600 max-w-2xl mx-auto"
           >
             Everything you need to transform. Expertly designed spaces and sessions tailored to every fitness level.
-          </motion.p>
+          </p>
         </div>
       </div>
 
@@ -69,11 +63,7 @@ export function Programs() {
             {programs.map((program, i) => {
               const Icon = program.icon;
               return (
-                <motion.div 
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
+                <div 
                   key={program.title}
                   className="bg-zinc-50 border border-zinc-200 rounded-2xl overflow-hidden group hover:border-brand-orange/30 hover:shadow-xl transition-all"
                 >
@@ -93,7 +83,7 @@ export function Programs() {
                       {program.description}
                     </p>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>

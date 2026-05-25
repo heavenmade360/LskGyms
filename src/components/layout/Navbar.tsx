@@ -1,7 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
 
 const links = [
   { name: 'Home', path: '/' },
@@ -70,12 +69,8 @@ export function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
+          <div
             className="md:hidden bg-white border-b border-zinc-100 overflow-hidden"
           >
             <div className="px-4 pt-2 pb-6 space-y-2">
@@ -101,9 +96,8 @@ export function Navbar() {
                 Contact Us
               </Link>
             </div>
-          </motion.div>
+          </div>
         )}
-      </AnimatePresence>
     </nav>
   );
 }

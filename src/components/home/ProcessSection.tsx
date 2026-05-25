@@ -1,5 +1,4 @@
 import { ClipboardList, Dumbbell, Moon, Target } from "lucide-react";
-import { motion } from 'motion/react';
 
 export function ProcessSection() {
   const steps = [
@@ -12,24 +11,15 @@ export function ProcessSection() {
   return (
     <section className="py-32 md:py-40 max-w-[1400px] mx-auto px-4 md:px-8 w-full">
       <div className="grid md:grid-cols-2 gap-8 items-end mb-20 md:mb-32">
-        <motion.div
-           initial={{ opacity: 0, x: -50 }}
-           whileInView={{ opacity: 1, x: 0 }}
-           viewport={{ once: true, margin: "-100px" }}
-           transition={{ duration: 0.8, ease: "easeOut" }}
-        >
+        <div>
           <h3 className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-4">Come to a result</h3>
           <h2 className="text-5xl md:text-7xl font-heading font-black uppercase tracking-tighter text-brand-dark">With Us</h2>
-        </motion.div>
-        <motion.p 
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        </div>
+        <p 
           className="text-zinc-600 text-xl md:text-2xl font-medium max-w-md mb-2 leading-relaxed"
         >
           Ready to take the first step towards a healthier, stronger you?
-        </motion.p>
+        </p>
       </div>
 
       <div className="relative mt-16 md:mt-24 max-w-5xl mx-auto">
@@ -44,12 +34,8 @@ export function ProcessSection() {
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
-              <motion.div 
+              <div 
                 key={index}
-                initial={{ opacity: 0, scale: 0.5, y: 50 }}
-                whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.6, delay: index * 0.2, type: "spring", stiffness: 100 }}
                 className="flex justify-center"
               >
                 <div className={`w-32 h-32 md:w-44 md:h-44 rounded-full flex items-center justify-center transition-all duration-500 hover:scale-105 cursor-pointer ${
@@ -59,7 +45,7 @@ export function ProcessSection() {
                 }`}>
                   <Icon className="w-12 h-12 md:w-14 md:h-14 stroke-[1.5]" />
                 </div>
-              </motion.div>
+              </div>
             );
           })}
 

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
 
 const faqs = [
@@ -36,33 +35,21 @@ export function FAQSection() {
     <section id="faq" className="py-32 md:py-40 bg-zinc-50 border-t border-zinc-100">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20 md:mb-24">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
+          <h2 
             className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-4"
           >
             Got Questions?
-          </motion.h2>
-          <motion.h3 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+          </h2>
+          <h3 
             className="text-4xl sm:text-5xl md:text-6xl font-heading font-black uppercase tracking-tighter text-brand-dark"
           >
             Frequently Asked Questions
-          </motion.h3>
+          </h3>
         </div>
 
         <div className="space-y-6">
           {faqs.map((faq, index) => (
-            <motion.div 
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+            <div 
               key={index}
               className="border border-zinc-200 rounded-[2rem] overflow-hidden bg-white transition-colors hover:border-brand-dark/20 shadow-sm hover:shadow-md"
             >
@@ -77,21 +64,14 @@ export function FAQSection() {
                   <ChevronDown className="w-6 h-6" />
                 </div>
               </button>
-              <AnimatePresence>
                 {openIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3, ease: 'easeInOut' }}
-                  >
+                  <div>
                     <div className="p-8 pt-0 text-zinc-600 text-lg leading-relaxed">
                       {faq.answer}
                     </div>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

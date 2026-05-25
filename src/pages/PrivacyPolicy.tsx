@@ -1,22 +1,15 @@
-import { motion } from 'motion/react';
-
 export function PrivacyPolicy() {
   return (
     <div className="pt-24 pb-24 bg-white min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div 
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-black font-heading uppercase tracking-tighter text-brand-dark mb-4">Privacy Policy</h1>
           <p className="text-zinc-500">Last updated: May 2026</p>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
+        <div 
           className="prose prose-zinc max-w-none text-zinc-600 leading-relaxed space-y-6"
         >
           <p>
@@ -47,7 +40,7 @@ export function PrivacyPolicy() {
           <p>
             If you have questions about this Privacy Policy, please contact us at info@zambiasfitness.co.zm or call +260 765 978 078.
           </p>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

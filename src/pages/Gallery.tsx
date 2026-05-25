@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { Play } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -48,40 +47,28 @@ export function Gallery() {
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         {/* Header */}
         <div className="text-center md:text-left mb-16 md:mb-24">
-          <motion.h3 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <h3 
             className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-4"
           >
             Inside ZAMBIA FIT
-          </motion.h3>
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+          </h3>
+          <h1 
             className="text-5xl sm:text-7xl md:text-8xl font-heading font-black uppercase tracking-tighter text-brand-dark mb-6 md:mb-8"
           >
             Our <span className="text-brand-orange">Gallery</span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          </h1>
+          <p 
             className="text-xl md:text-2xl text-zinc-600 max-w-3xl leading-relaxed mx-auto md:mx-0"
           >
             Take a visual tour of our world-class facilities, energetic classes, and the community that makes us the premier fitness destination in Lusaka.
-          </motion.p>
+          </p>
         </div>
 
         {/* Gallery Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 auto-rows-[300px] gap-6 md:gap-8">
           {galleryItems.map((item, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 50, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 0.8, delay: index * 0.1, ease: 'easeOut' }}
               className={`relative rounded-[32px] md:rounded-[40px] overflow-hidden group border-[6px] border-white shadow-2xl ${item.className || 'md:col-span-1 md:row-span-1'}`}
             >
               <img 
@@ -98,15 +85,12 @@ export function Gallery() {
                   </div>
                 </div>
               )}
-            </motion.div>
+            </div>
           ))}
         </div>
         
         {/* Load More Button */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+        <div 
           className="mt-20 flex justify-center"
         >
           <Link 
@@ -115,7 +99,7 @@ export function Gallery() {
           >
             Visit Us for More
           </Link>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

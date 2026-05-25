@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { Check } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -49,21 +48,16 @@ export function Memberships() {
     <div className="flex flex-col bg-white">
       <div className="bg-brand-gray border-b border-zinc-100 py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <h1 
             className="text-5xl sm:text-7xl font-heading font-black uppercase tracking-tighter text-brand-dark mb-6"
           >
             Membership <span className="text-brand-orange">Plans</span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+          </h1>
+          <p 
             className="text-xl text-zinc-600 max-w-2xl mx-auto"
           >
             Flexible membership options for every goal and schedule. No hidden fees.
-          </motion.p>
+          </p>
         </div>
       </div>
 
@@ -71,11 +65,7 @@ export function Memberships() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {plans.map((plan, i) => (
-              <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
+              <div 
                 key={plan.name}
                 className={`relative bg-white shadow-xl border rounded-3xl p-8 flex flex-col transition-transform hover:-translate-y-2 ${
                   plan.popular ? 'border-brand-orange shadow-[0_10px_40px_rgba(255,90,38,0.15)]' : 'border-zinc-200'
@@ -115,7 +105,7 @@ export function Memberships() {
                 >
                   Choose {plan.name}
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

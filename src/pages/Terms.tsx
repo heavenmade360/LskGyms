@@ -1,22 +1,15 @@
-import { motion } from 'motion/react';
-
 export function Terms() {
   return (
     <div className="pt-24 pb-24 bg-white min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+        <div 
           className="text-center mb-16"
         >
           <h1 className="text-4xl md:text-5xl font-black font-heading uppercase tracking-tighter text-brand-dark mb-4">Terms of Service</h1>
           <p className="text-zinc-500">Last updated: May 2026</p>
-        </motion.div>
+        </div>
 
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
+        <div 
           className="prose prose-zinc max-w-none text-zinc-600 leading-relaxed space-y-6"
         >
           <p>
@@ -47,7 +40,7 @@ export function Terms() {
           <p>
             We reserve the right to modify these terms, our operating hours, and class schedules at any time. Significant changes will be communicated to active members via email or posted notices in the facility.
           </p>
-        </motion.div>
+        </div>
       </div>
     </div>
   );

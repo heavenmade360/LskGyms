@@ -1,5 +1,4 @@
 import { ArrowUpRight } from 'lucide-react';
-import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
 const classes = [
@@ -33,33 +32,21 @@ export function ClassesSection() {
   return (
     <section className="py-32 md:py-40 max-w-[1400px] mx-auto px-4 md:px-8 w-full">
       <div className="mb-16 md:mb-24">
-        <motion.h3 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+        <h3 
           className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-4"
         >
           Classes Designed
-        </motion.h3>
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+        </h3>
+        <h2 
           className="text-5xl md:text-7xl font-heading font-black uppercase tracking-tighter text-brand-dark"
         >
           For You
-        </motion.h2>
+        </h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-6 items-start">
         {classes.map((cls, i) => (
-          <motion.div 
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: i * 0.15, ease: "easeOut" }}
+          <div 
             key={cls.title} 
             className={`block group cursor-pointer ${cls.containerClass}`}
           >
@@ -79,7 +66,7 @@ export function ClassesSection() {
               </div>
             </div>
             </Link>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

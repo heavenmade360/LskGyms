@@ -1,4 +1,3 @@
-import { motion, AnimatePresence } from 'motion/react';
 import { MapPin, Phone, Mail, Clock, ArrowRight, CheckCircle2 } from 'lucide-react';
 import React, { useState } from 'react';
 
@@ -22,21 +21,16 @@ export function Contact() {
     <div className="flex flex-col bg-white">
       <div className="bg-brand-gray border-b border-zinc-100 py-24 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-          <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          <h1 
             className="text-5xl sm:text-7xl font-heading font-black uppercase tracking-tighter text-brand-dark mb-6"
           >
             Get in <span className="text-brand-orange">Touch</span>
-          </motion.h1>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
+          </h1>
+          <p 
             className="text-xl text-zinc-600 max-w-2xl mx-auto"
           >
             Ready to start your transformation? Drop by our facility, call us, or send a message.
-          </motion.p>
+          </p>
         </div>
       </div>
 
@@ -117,20 +111,15 @@ export function Contact() {
 
             {/* Form */}
             <div className="bg-brand-gray border border-zinc-200 rounded-3xl p-8 lg:p-12 relative overflow-hidden">
-              <AnimatePresence>
                 {isSuccess && (
-                  <motion.div 
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
+                  <div 
                     className="absolute inset-0 bg-white/90 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-8"
                   >
                     <CheckCircle2 className="w-16 h-16 text-green-500 mb-4" />
                     <h4 className="text-2xl font-bold font-heading text-brand-dark mb-2">Message Sent!</h4>
                     <p className="text-zinc-600">We'll get back to you as soon as possible.</p>
-                  </motion.div>
+                  </div>
                 )}
-              </AnimatePresence>
 
               <h3 className="text-2xl font-black font-heading uppercase tracking-wider text-brand-dark mb-8">Send a Message</h3>
               <form className="space-y-6" onSubmit={handleSubmit}>

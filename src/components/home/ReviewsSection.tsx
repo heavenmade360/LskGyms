@@ -1,5 +1,4 @@
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 
 const reviews = [
@@ -33,62 +32,38 @@ export function ReviewsSection() {
   return (
     <section className="py-32 md:py-40 max-w-[1400px] mx-auto px-4 md:px-8 w-full overflow-hidden">
       <div className="mb-20 md:mb-24">
-        <motion.h3 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+        <h3 
           className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-4"
         >
           Reviews
-        </motion.h3>
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6, delay: 0.1 }}
+        </h3>
+        <h2 
           className="text-5xl md:text-7xl font-heading font-black uppercase tracking-tighter text-brand-dark"
         >
           From You
-        </motion.h2>
+        </h2>
       </div>
 
       <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
         
         {/* Portraits Collage */}
         <div className="relative h-[400px] md:h-[500px] flex items-center justify-center">
-          <motion.img 
-            initial={{ opacity: 0, scale: 0.5, rotate: -15 }}
-            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, type: "spring" }}
+          <img 
             src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?q=80&w=200&auto=format&fit=crop" 
             alt="Reviewer" 
             className="w-28 h-28 sm:w-36 sm:h-36 rounded-full object-cover absolute top-0 left-0 sm:left-10 border-[6px] border-white shadow-2xl z-10 hover:z-30 hover:scale-110 transition-transform duration-300"
           />
-          <motion.img 
-            initial={{ opacity: 0, scale: 0.5, rotate: 15 }}
-            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.1, type: "spring" }}
+          <img 
             src="https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=200&auto=format&fit=crop" 
             alt="Reviewer" 
             className="w-40 h-40 sm:w-56 sm:h-56 rounded-full object-cover absolute top-10 right-0 sm:right-10 md:right-20 border-[8px] border-white shadow-2xl z-20 hover:z-30 hover:scale-110 transition-transform duration-300"
           />
-          <motion.img 
-            initial={{ opacity: 0, scale: 0.5, y: 50 }}
-            whileInView={{ opacity: 1, scale: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.2, type: "spring" }}
+          <img 
             src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=200&auto=format&fit=crop" 
             alt="Reviewer" 
             className="w-32 h-32 sm:w-44 sm:h-44 rounded-full object-cover absolute bottom-10 left-8 sm:left-1/3 border-[6px] border-white shadow-2xl z-10 hover:z-30 hover:scale-110 transition-transform duration-300"
           />
-          <motion.img 
-            initial={{ opacity: 0, scale: 0.5, x: 50 }}
-            whileInView={{ opacity: 1, scale: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.8, delay: 0.3, type: "spring" }}
+          <img 
             src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" 
             alt="Reviewer" 
             className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover absolute bottom-0 right-4 sm:right-12 border-[6px] border-white shadow-2xl hover:z-30 hover:scale-110 transition-transform duration-300"
@@ -100,13 +75,8 @@ export function ReviewsSection() {
            <div className="flex flex-col md:flex-row gap-8 mb-12 relative min-h-[250px]">
              
              {/* Review Card 1 */}
-             <AnimatePresence mode="wait">
-               <motion.div 
+               <div 
                  key={currentIndex}
-                 initial={{ opacity: 0, y: 10 }}
-                 animate={{ opacity: 1, y: 0 }}
-                 exit={{ opacity: 0, y: -10 }}
-                 transition={{ duration: 0.4 }}
                  className="flex-1 bg-white border border-zinc-100 rounded-[40px] p-8 md:p-10 shadow-xl shadow-zinc-200/50 relative z-20"
                >
                  <div className="flex justify-between items-start mb-8">
@@ -118,11 +88,10 @@ export function ReviewsSection() {
                  <p className="text-zinc-600 text-base md:text-lg leading-relaxed">
                    {reviews[currentIndex].text}
                  </p>
-               </motion.div>
-             </AnimatePresence>
+               </div>
 
              {/* Review Card 2 (Faded/Next) */}
-             <motion.div 
+             <div 
                className="flex-1 bg-white border border-zinc-100 rounded-[40px] p-8 md:p-10 shadow-sm opacity-40 hidden md:block scale-95 origin-left absolute -right-32 top-0 bottom-0 w-full z-10 pointer-events-none"
              >
                <div className="flex justify-between items-start mb-8">
@@ -134,16 +103,12 @@ export function ReviewsSection() {
                <p className="text-zinc-400 text-base md:text-lg leading-relaxed">
                  {reviews[nextIndex].text}
                </p>
-             </motion.div>
+             </div>
 
            </div>
 
            {/* Navigation */}
-           <motion.div 
-             initial={{ opacity: 0 }}
-             whileInView={{ opacity: 1 }}
-             viewport={{ once: true, margin: "-100px" }}
-             transition={{ duration: 0.6, delay: 0.6 }}
+           <div 
              className="flex items-center gap-4 px-4 mt-8"
            >
              <button 
@@ -158,7 +123,7 @@ export function ReviewsSection() {
              >
                <ArrowRight className="w-6 h-6" />
              </button>
-           </motion.div>
+           </div>
         </div>
 
       </div>

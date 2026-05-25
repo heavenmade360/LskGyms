@@ -1,15 +1,11 @@
 import { ArrowDown, Play } from 'lucide-react';
-import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
 export function HeroSection() {
   return (
     <section className="relative w-full min-h-[100svh] flex flex-col justify-center overflow-hidden">
       {/* Background Image */}
-      <motion.div 
-        initial={{ scale: 1.1 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
+      <div 
         className="absolute inset-0 z-0"
       >
         <img 
@@ -20,50 +16,36 @@ export function HeroSection() {
         {/* Overlay */}
         <div className="absolute inset-0 bg-brand-dark/70 bg-gradient-to-t from-brand-dark via-brand-dark/50 to-transparent mix-blend-multiply"></div>
         <div className="absolute inset-0 bg-black/40"></div>
-      </motion.div>
+      </div>
 
       <div className="relative z-10 max-w-[1400px] mx-auto px-4 md:px-8 w-full pt-32 pb-20 flex flex-col md:flex-row items-center justify-between h-full gap-12">
         
         {/* Left Content */}
         <div className="w-full md:w-3/5 flex flex-col justify-center items-center md:items-start text-center md:text-left mt-8 md:mt-0">
-          <motion.h1 
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+          <h1 
             className="text-6xl sm:text-7xl md:text-[90px] lg:text-[120px] font-heading font-black leading-[0.85] text-white tracking-tighter drop-shadow-2xl uppercase"
           >
             No Pain<br /> No Gain
-          </motion.h1>
+          </h1>
 
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          <p 
             className="mt-8 text-base md:text-lg lg:text-xl text-zinc-300 max-w-[500px] font-medium leading-relaxed drop-shadow-md"
           >
             We believe that fitness is not just a destination; it's a journey. Our state-of-the-art facility in Lusaka is designed to inspire and empower you to reach your health and wellness goals.
-          </motion.p>
+          </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-6 mt-12 w-full md:w-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-            >
+            <div>
               <Link 
                 to="/memberships"
                 className="inline-block w-full sm:w-auto bg-brand-orange hover:bg-orange-600 text-white px-10 py-5 rounded-full font-bold transition-all shadow-2xl shadow-brand-orange/40 text-base md:text-lg tracking-wide hover:-translate-y-1 text-center"
               >
                 Start Journey
               </Link>
-            </motion.div>
+            </div>
 
             {/* Video trigger button */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-            >
+            <div>
               <Link 
                 to="/gallery"
                 className="flex items-center justify-center gap-4 cursor-pointer group"
@@ -73,13 +55,10 @@ export function HeroSection() {
                  </div>
                  <span className="font-bold text-white uppercase tracking-widest text-sm whitespace-nowrap">Watch Video</span>
               </Link>
-            </motion.div>
+            </div>
           </div>
           
-          <motion.div 
-            initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+          <div 
             className="mt-16 md:mt-24 bg-white/10 backdrop-blur-md rounded-full p-2 pr-8 flex items-center gap-5 shadow-2xl self-center md:self-start border border-white/20"
           >
              <div className="flex -space-x-4">
@@ -90,14 +69,11 @@ export function HeroSection() {
                <p className="text-2xl font-bold font-heading text-white leading-none">15+</p>
                <p className="text-[11px] text-zinc-300 uppercase tracking-widest font-bold leading-tight mt-1">Active<br/>coaches</p>
              </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Scroll indicator - absolute positioned */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+        <div 
           className="absolute bottom-12 right-4 md:right-12 flex flex-col items-center gap-4 z-20 hidden lg:flex"
         >
           <span className="text-[10px] font-bold uppercase tracking-widest text-zinc-300 writing-vertical-rl mb-2" style={{ writingMode: 'vertical-rl' }}>Scroll</span>
@@ -107,7 +83,7 @@ export function HeroSection() {
           >
             <ArrowDown className="w-6 h-6" />
           </div>
-        </motion.div>
+        </div>
 
       </div>
     </section>

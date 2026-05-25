@@ -1,4 +1,3 @@
-import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
 export function CoachesSection() {
@@ -7,11 +6,7 @@ export function CoachesSection() {
       <div className="grid md:grid-cols-2 gap-16 lg:gap-24 items-center">
         
         {/* Image */}
-        <motion.div 
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 1, ease: "easeOut" }}
+        <div 
           className="relative h-[350px] sm:h-[450px] md:h-[600px] w-full bg-zinc-100 rounded-[48px] overflow-hidden shadow-2xl"
         >
           <img 
@@ -28,50 +23,33 @@ export function CoachesSection() {
               </svg>
             </Link>
           </div>
-        </motion.div>
+        </div>
 
         {/* Text Details */}
         <div className="md:pl-12 lg:pl-16">
-          <motion.h3 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6 }}
+          <h3 
             className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-4"
           >
             Are you looking for a mentor?
-          </motion.h3>
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.1 }}
+          </h3>
+          <h2 
             className="text-5xl md:text-6xl lg:text-7xl font-heading font-black uppercase tracking-tighter text-brand-dark mb-8"
           >
             Our Coaches
-          </motion.h2>
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+          </h2>
+          <p 
             className="text-zinc-600 text-lg leading-relaxed mb-10 max-w-lg"
           >
             Our team of certified and experienced Zambian trainers is dedicated to helping you achieve your fitness goals. Whether you're looking to build muscle, lose weight, or improve overall health, our trainers will create a personalized plan to guide you every step of the way.
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
+          </p>
+          <div>
             <Link 
               to="/about"
               className="inline-block bg-brand-orange hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold transition-all shadow-xl shadow-brand-orange/30 text-sm tracking-wide text-center"
             >
               Explore More
             </Link>
-          </motion.div>
+          </div>
         </div>
 
       </div>
