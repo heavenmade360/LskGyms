@@ -61,7 +61,7 @@ export function ClassesSection() {
             </div>
             <div className="mt-8 flex items-center justify-between px-2">
               <h4 className="text-xl md:text-2xl font-bold font-heading text-brand-dark tracking-tight">{cls.title}</h4>
-              <div className="w-12 h-12 rounded-full bg-brand-orange flex items-center justify-center text-white group-hover:bg-orange-600 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg shadow-brand-orange/30">
+              <div className="w-12 h-12 rounded-full bg-brand-green flex items-center justify-center text-white group-hover:bg-brand-green-dark group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 shadow-lg shadow-brand-green/30">
                 <ArrowUpRight className="w-6 h-6" />
               </div>
             </div>

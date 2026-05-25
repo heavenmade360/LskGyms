@@ -47,7 +47,7 @@ export function Programs() {
           <h1 
             className="text-5xl sm:text-7xl font-heading font-black uppercase tracking-tighter text-brand-dark mb-6"
           >
-            Our <span className="text-brand-orange">Programs</span>
+            Our <span className="text-brand-green">Programs</span>
           </h1>
           <p 
             className="text-xl text-zinc-600 max-w-2xl mx-auto"
@@ -65,7 +65,7 @@ export function Programs() {
               return (
                 <div 
                   key={program.title}
-                  className="bg-zinc-50 border border-zinc-200 rounded-2xl overflow-hidden group hover:border-brand-orange/30 hover:shadow-xl transition-all"
+                  className="bg-zinc-50 border border-zinc-200 rounded-2xl overflow-hidden group hover:border-brand-green/30 hover:shadow-xl transition-all"
                 >
                   <div className="h-48 relative overflow-hidden">
                     <img 
@@ -75,7 +75,7 @@ export function Programs() {
                     />
                   </div>
                   <div className="p-8 relative">
-                    <div className="absolute -top-10 right-8 w-14 h-14 bg-white border border-zinc-100 rounded-xl flex items-center justify-center text-brand-orange shadow-lg group-hover:bg-brand-orange group-hover:text-white transition-colors duration-300">
+                    <div className="absolute -top-10 right-8 w-14 h-14 bg-white border border-zinc-100 rounded-xl flex items-center justify-center text-brand-green shadow-lg group-hover:bg-brand-green group-hover:text-white transition-colors duration-300">
                       <Icon className="w-7 h-7" />
                     </div>
                     <h3 className="text-2xl font-bold font-heading text-brand-dark uppercase tracking-wider mb-3">{program.title}</h3>

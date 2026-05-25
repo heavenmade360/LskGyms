@@ -43,19 +43,19 @@ const galleryItems = [
 export function Gallery() {
   return (
     <div className="flex flex-col min-h-screen bg-brand-gray pt-24 md:pt-32 pb-24 relative">
-      <div className="absolute right-0 top-0 w-1/2 h-full bg-brand-orange/5 blur-[120px] rounded-full pointer-events-none z-0" />
+      <div className="absolute right-0 top-0 w-1/2 h-full bg-brand-green/5 blur-[120px] rounded-full pointer-events-none z-0" />
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         {/* Header */}
         <div className="text-center md:text-left mb-16 md:mb-24">
           <h3 
             className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-4"
           >
-            Inside GLADIATOR FITNESS
+            Inside ZAMBIA FIT
           </h3>
           <h1 
             className="text-5xl sm:text-7xl md:text-8xl font-heading font-black uppercase tracking-tighter text-brand-dark mb-6 md:mb-8"
           >
-            Our <span className="text-brand-orange">Gallery</span>
+            Our <span className="text-brand-green">Gallery</span>
           </h1>
           <p 
             className="text-xl md:text-2xl text-zinc-600 max-w-3xl leading-relaxed mx-auto md:mx-0"

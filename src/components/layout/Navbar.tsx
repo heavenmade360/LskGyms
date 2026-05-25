@@ -20,10 +20,13 @@ export function Navbar() {
           
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center gap-2">
-            <Link to="/" className="flex items-center gap-3 group">
-              <img src="/images (2).png" alt="Gladiator Fitness Logo" className="h-12 w-auto object-contain" />
-              <span className="hidden sm:block text-2xl font-heading font-black tracking-tighter text-brand-dark uppercase">
-                GLADIATOR FITNESS
+            <Link to="/" className="flex items-center gap-2 group">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-brand-green">
+                <path d="M16 0L32 16L16 32L0 16L16 0Z" fill="currentColor"/>
+                <path d="M16 8L24 16L16 24L8 16L16 8Z" fill="white"/>
+              </svg>
+              <span className="text-2xl font-heading font-black tracking-tighter text-brand-dark uppercase">
+                ZAMBIA FIT
               </span>
             </Link>
           </div>
@@ -34,8 +37,8 @@ export function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-brand-orange ${
-                  location.pathname === link.path ? 'text-brand-orange' : 'text-zinc-500'
+                className={`text-sm font-medium transition-colors hover:text-brand-green ${
+                  location.pathname === link.path ? 'text-brand-green' : 'text-zinc-500'
                 }`}
               >
                 {link.name}
@@ -78,7 +81,7 @@ export function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className={`block px-3 py-3 rounded-md text-base font-medium ${
                     location.pathname === link.path
-                      ? 'bg-brand-orange/10 text-brand-orange'
+                      ? 'bg-brand-green/10 text-brand-green'
                       : 'text-zinc-600 hover:bg-zinc-50 hover:text-brand-dark'
                   }`}
                 >

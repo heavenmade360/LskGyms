@@ -4,7 +4,8 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-heading: "Montserrat", ui-sans-serif, system-ui, sans-serif;
-  --color-brand-orange: #FF5A26;
+  --color-brand-green: #4A5D23;
+  --color-brand-green-dark: #3A4A1A;
   --color-brand-gray: #F4F4F6;
   --color-brand-dark: #111111;
 }

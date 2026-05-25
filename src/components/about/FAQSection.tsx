@@ -59,7 +59,7 @@ export function FAQSection() {
               >
                 <span className="text-xl font-bold font-heading text-brand-dark pr-8">{faq.question}</span>
                 <div 
-                  className={`flex-shrink-0 w-12 h-12 rounded-full border-[3px] border-zinc-100 flex items-center justify-center transition-all duration-300 ${openIndex === index ? 'rotate-180 bg-brand-orange border-brand-orange text-white' : 'text-zinc-400 bg-white'}`}
+                  className={`flex-shrink-0 w-12 h-12 rounded-full border-[3px] border-zinc-100 flex items-center justify-center transition-all duration-300 ${openIndex === index ? 'rotate-180 bg-brand-green border-brand-green text-white' : 'text-zinc-400 bg-white'}`}
                 >
                   <ChevronDown className="w-6 h-6" />
                 </div>

@@ -1,4 +1,4 @@
-import { ArrowDown, Play } from 'lucide-react';
+import { ArrowDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export function HeroSection() {
@@ -38,24 +38,13 @@ export function HeroSection() {
             <div>
               <Link 
                 to="/memberships"
-                className="inline-block w-full sm:w-auto bg-brand-orange hover:bg-orange-600 text-white px-10 py-5 rounded-full font-bold transition-all shadow-2xl shadow-brand-orange/40 text-base md:text-lg tracking-wide hover:-translate-y-1 text-center"
+                className="inline-block w-full sm:w-auto bg-brand-green hover:bg-brand-green-dark text-white px-10 py-5 rounded-full font-bold transition-all shadow-2xl shadow-brand-green/40 text-base md:text-lg tracking-wide hover:-translate-y-1 text-center"
               >
                 Start Journey
               </Link>
             </div>
 
-            {/* Video trigger button */}
-            <div>
-              <Link 
-                to="/gallery"
-                className="flex items-center justify-center gap-4 cursor-pointer group"
-              >
-                 <div className="w-16 h-16 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/20 group-hover:scale-110 group-hover:bg-white group-hover:text-brand-dark transition-all duration-300 shadow-xl">
-                    <Play className="w-6 h-6 ml-1" fill="currentColor" />
-                 </div>
-                 <span className="font-bold text-white uppercase tracking-widest text-sm whitespace-nowrap">Watch Video</span>
-              </Link>
-            </div>
+
           </div>
           
           <div 

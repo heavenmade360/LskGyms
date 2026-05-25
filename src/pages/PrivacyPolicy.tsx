@@ -13,7 +13,7 @@ export function PrivacyPolicy() {
           className="prose prose-zinc max-w-none text-zinc-600 leading-relaxed space-y-6"
         >
           <p>
-            At GLADIATOR FITNESS, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services in Lusaka, Zambia.
+            At ZAMBIA FIT, we take your privacy seriously. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services in Lusaka, Zambia.
           </p>
           
           <h2 className="text-2xl font-bold text-brand-dark mt-8 mb-4">1. Information We Collect</h2>
@@ -38,7 +38,7 @@ export function PrivacyPolicy() {
           
           <h2 className="text-2xl font-bold text-brand-dark mt-8 mb-4">5. Contact Us</h2>
           <p>
-            If you have questions about this Privacy Policy, please contact us at info@gladiatorfitness.com or call +260 765 978 078.
+            If you have questions about this Privacy Policy, please contact us at info@zambiasfitness.co.zm or call +260 765 978 078.
           </p>
         </div>
       </div>

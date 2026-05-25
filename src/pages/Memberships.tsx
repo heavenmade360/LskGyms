@@ -51,7 +51,7 @@ export function Memberships() {
           <h1 
             className="text-5xl sm:text-7xl font-heading font-black uppercase tracking-tighter text-brand-dark mb-6"
           >
-            Membership <span className="text-brand-orange">Plans</span>
+            Membership <span className="text-brand-green">Plans</span>
           </h1>
           <p 
             className="text-xl text-zinc-600 max-w-2xl mx-auto"
@@ -68,11 +68,11 @@ export function Memberships() {
               <div 
                 key={plan.name}
                 className={`relative bg-white shadow-xl border rounded-3xl p-8 flex flex-col transition-transform hover:-translate-y-2 ${
-                  plan.popular ? 'border-brand-orange shadow-[0_10px_40px_rgba(255,90,38,0.15)]' : 'border-zinc-200'
+                  plan.popular ? 'border-brand-green shadow-[0_10px_40px_rgba(255,90,38,0.15)]' : 'border-zinc-200'
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-orange text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-brand-green text-white px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest">
                     Most Popular
                   </div>
                 )}
@@ -89,7 +89,7 @@ export function Memberships() {
                 <ul className="space-y-4 mb-8 flex-grow">
                   {plan.features.map(feature => (
                     <li key={feature} className="flex gap-3 text-zinc-700">
-                      <Check className="w-5 h-5 text-brand-orange shrink-0" />
+                      <Check className="w-5 h-5 text-brand-green shrink-0" />
                       <span className="text-sm font-medium">{feature}</span>
                     </li>
                   ))}
@@ -99,7 +99,7 @@ export function Memberships() {
                   to="/contact"
                   className={`w-full py-4 rounded-full font-bold uppercase tracking-widest text-sm transition-all text-center ${
                     plan.popular 
-                      ? 'bg-brand-orange hover:bg-orange-600 text-white shadow-lg' 
+                      ? 'bg-brand-green hover:bg-brand-green-dark text-white shadow-lg' 
                       : 'bg-zinc-100 hover:bg-zinc-200 text-brand-dark'
                   }`}
                 >

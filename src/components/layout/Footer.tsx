@@ -12,16 +12,19 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
           {/* Brand */}
           <div className="space-y-6">
-            <Link to="/" className="flex items-center gap-3">
-              <img src="/images (2).png" alt="Gladiator Fitness Logo" className="h-10 w-auto object-contain brightness-0 invert" />
+            <Link to="/" className="flex items-center gap-2">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="text-brand-green">
+                <path d="M16 0L32 16L16 32L0 16L16 0Z" fill="currentColor"/>
+                <path d="M16 8L24 16L16 24L8 16L16 8Z" fill="black"/>
+              </svg>
               <span className="text-2xl font-heading font-black tracking-tighter text-white uppercase">
-                GLADIATOR FITNESS
+                ZAMBIA FIT
               </span>
             </Link>
             <p className="text-zinc-400 text-sm leading-relaxed">
               Plot 1234, Great East Road<br/>
               Arcades Area, Lusaka, Zambia<br/>
-              info@gladiatorfitness.com
+              info@zambiasfitness.co.zm
             </p>
           </div>
 
@@ -31,7 +34,7 @@ export function Footer() {
             <ul className="space-y-3">
               {['Home', 'Membership', 'About', 'Gallery'].map((item) => (
                 <li key={item}>
-                  <Link to={`/${item === 'Home' ? '' : item === 'Membership' ? 'memberships' : item.toLowerCase()}`} className="text-zinc-400 hover:text-brand-orange transition-colors text-sm">
+                  <Link to={`/${item === 'Home' ? '' : item === 'Membership' ? 'memberships' : item.toLowerCase()}`} className="text-zinc-400 hover:text-brand-green transition-colors text-sm">
                     {item}
                   </Link>
                 </li>
@@ -43,10 +46,10 @@ export function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-6">Quick Links</h3>
             <ul className="space-y-3">
-              <li><Link to="/contact" className="text-zinc-400 hover:text-brand-orange transition-colors text-sm">Contact Us</Link></li>
-              <li><Link to="/terms" className="text-zinc-400 hover:text-brand-orange transition-colors text-sm">Terms of Service</Link></li>
-              <li><Link to="/privacy" className="text-zinc-400 hover:text-brand-orange transition-colors text-sm">Privacy Policy</Link></li>
-              <li><Link to="/about#faq" className="text-zinc-400 hover:text-brand-orange transition-colors text-sm">FAQ</Link></li>
+              <li><Link to="/contact" className="text-zinc-400 hover:text-brand-green transition-colors text-sm">Contact Us</Link></li>
+              <li><Link to="/terms" className="text-zinc-400 hover:text-brand-green transition-colors text-sm">Terms of Service</Link></li>
+              <li><Link to="/privacy" className="text-zinc-400 hover:text-brand-green transition-colors text-sm">Privacy Policy</Link></li>
+              <li><Link to="/about#faq" className="text-zinc-400 hover:text-brand-green transition-colors text-sm">FAQ</Link></li>
             </ul>
           </div>
 
@@ -64,22 +67,22 @@ export function Footer() {
 
         <div className="border-t border-zinc-800 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex space-x-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-colors">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:bg-brand-green hover:text-white hover:border-brand-green transition-colors">
               <Facebook className="w-4 h-4" />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-colors">
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:bg-brand-green hover:text-white hover:border-brand-green transition-colors">
               <Twitter className="w-4 h-4" />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:bg-brand-orange hover:text-white hover:border-brand-orange transition-colors">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full border border-zinc-700 flex items-center justify-center text-zinc-400 hover:bg-brand-green hover:text-white hover:border-brand-green transition-colors">
               <Instagram className="w-4 h-4" />
             </a>
           </div>
           
           <p className="text-zinc-500 text-xs">
-            Copyright © GLADIATOR FITNESS. All Rights Reserved.
+            Copyright © ZAMBIA FIT. All Rights Reserved.
           </p>
 
-          <button onClick={scrollToTop} className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-brand-dark hover:bg-brand-orange hover:text-white transition-colors">
+          <button onClick={scrollToTop} className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-brand-dark hover:bg-brand-green hover:text-white transition-colors">
             <ArrowUp className="w-5 h-5" />
           </button>
         </div>

@@ -17,7 +17,7 @@ export function CoachesSection() {
           <div className="absolute inset-x-0 bottom-0 min-h-[30%] bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
            {/* Play button overlay */}
           <div className="absolute inset-0 flex flex-col justify-center items-center">
-            <Link to="/gallery" className="w-16 h-16 bg-brand-orange/90 backdrop-blur rounded-full flex items-center justify-center text-white shadow-xl hover:scale-110 hover:bg-brand-orange transition-all cursor-pointer">
+            <Link to="/gallery" className="w-16 h-16 bg-brand-green/90 backdrop-blur rounded-full flex items-center justify-center text-white shadow-xl hover:scale-110 hover:bg-brand-green transition-all cursor-pointer">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" className="ml-1">
                 <path d="M8 5V19L19 12L8 5Z" />
               </svg>
@@ -40,12 +40,12 @@ export function CoachesSection() {
           <p 
             className="text-zinc-600 text-lg leading-relaxed mb-10 max-w-lg"
           >
-            Our team of certified and experienced professional trainers is dedicated to helping you achieve your fitness goals. Whether you're looking to build muscle, lose weight, or improve overall health, our trainers will create a personalized plan to guide you every step of the way.
+            Our team of certified and experienced Zambian trainers is dedicated to helping you achieve your fitness goals. Whether you're looking to build muscle, lose weight, or improve overall health, our trainers will create a personalized plan to guide you every step of the way.
           </p>
           <div>
             <Link 
               to="/about"
-              className="inline-block bg-brand-orange hover:bg-orange-600 text-white px-10 py-4 rounded-full font-bold transition-all shadow-xl shadow-brand-orange/30 text-sm tracking-wide text-center"
+              className="inline-block bg-brand-green hover:bg-brand-green-dark text-white px-10 py-4 rounded-full font-bold transition-all shadow-xl shadow-brand-green/30 text-sm tracking-wide text-center"
             >
               Explore More
             </Link>

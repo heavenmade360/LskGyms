@@ -24,7 +24,7 @@ export function Contact() {
           <h1 
             className="text-5xl sm:text-7xl font-heading font-black uppercase tracking-tighter text-brand-dark mb-6"
           >
-            Get in <span className="text-brand-orange">Touch</span>
+            Get in <span className="text-brand-green">Touch</span>
           </h1>
           <p 
             className="text-xl text-zinc-600 max-w-2xl mx-auto"
@@ -47,13 +47,13 @@ export function Contact() {
 
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-zinc-50 border border-zinc-200 rounded-xl flex items-center justify-center text-brand-orange shrink-0">
+                  <div className="w-12 h-12 bg-zinc-50 border border-zinc-200 rounded-xl flex items-center justify-center text-brand-green shrink-0">
                     <MapPin className="w-6 h-6" />
                   </div>
                   <div>
                     <h3 className="text-brand-dark font-bold font-heading uppercase tracking-wider mb-2">Location</h3>
                     <p className="text-zinc-600 leading-relaxed text-sm">
-                      Gladiator Fitness<br/>
+                      Zambia's Fitness Gym<br/>
                       Plot 1234, Great East Road<br/>
                       Arcades Area, Lusaka, Zambia
                     </p>
@@ -61,7 +61,7 @@ export function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-zinc-50 border border-zinc-200 rounded-xl flex items-center justify-center text-brand-orange shrink-0">
+                  <div className="w-12 h-12 bg-zinc-50 border border-zinc-200 rounded-xl flex items-center justify-center text-brand-green shrink-0">
                     <Phone className="w-6 h-6" />
                   </div>
                   <div>
@@ -73,19 +73,19 @@ export function Contact() {
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-zinc-50 border border-zinc-200 rounded-xl flex items-center justify-center text-brand-orange shrink-0">
+                  <div className="w-12 h-12 bg-zinc-50 border border-zinc-200 rounded-xl flex items-center justify-center text-brand-green shrink-0">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
                     <h3 className="text-brand-dark font-bold font-heading uppercase tracking-wider mb-2">Email</h3>
                     <p className="text-zinc-600 leading-relaxed text-sm">
-                      info@gladiatorfitness.com
+                      info@zambiasfitness.co.zm
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-zinc-50 border border-zinc-200 rounded-xl flex items-center justify-center text-brand-orange shrink-0">
+                  <div className="w-12 h-12 bg-zinc-50 border border-zinc-200 rounded-xl flex items-center justify-center text-brand-green shrink-0">
                     <Clock className="w-6 h-6" />
                   </div>
                   <div>
@@ -129,7 +129,7 @@ export function Contact() {
                     <input 
                       type="text" 
                       required
-                      className="w-full bg-white border border-zinc-200 rounded-xl px-4 py-3 text-brand-dark focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors"
+                      className="w-full bg-white border border-zinc-200 rounded-xl px-4 py-3 text-brand-dark focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-colors"
                       placeholder="John"
                     />
                   </div>
@@ -138,7 +138,7 @@ export function Contact() {
                     <input 
                       type="text" 
                       required
-                      className="w-full bg-white border border-zinc-200 rounded-xl px-4 py-3 text-brand-dark focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors"
+                      className="w-full bg-white border border-zinc-200 rounded-xl px-4 py-3 text-brand-dark focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-colors"
                       placeholder="Doe"
                     />
                   </div>
@@ -149,7 +149,7 @@ export function Contact() {
                   <input 
                     type="email" 
                     required
-                    className="w-full bg-white border border-zinc-200 rounded-xl px-4 py-3 text-brand-dark focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors"
+                    className="w-full bg-white border border-zinc-200 rounded-xl px-4 py-3 text-brand-dark focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-colors"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -159,7 +159,7 @@ export function Contact() {
                   <textarea 
                     rows={4}
                     required
-                    className="w-full bg-white border border-zinc-200 rounded-xl px-4 py-3 text-brand-dark focus:outline-none focus:border-brand-orange focus:ring-1 focus:ring-brand-orange transition-colors resize-none"
+                    className="w-full bg-white border border-zinc-200 rounded-xl px-4 py-3 text-brand-dark focus:outline-none focus:border-brand-green focus:ring-1 focus:ring-brand-green transition-colors resize-none"
                     placeholder="I'm interested in personal training..."
                   />
                 </div>
@@ -167,7 +167,7 @@ export function Contact() {
                 <button 
                   disabled={isSubmitting}
                   type="submit"
-                  className="w-full bg-brand-orange hover:bg-orange-600 text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed"
+                  className="w-full bg-brand-green hover:bg-brand-green-dark text-white px-8 py-4 rounded-xl font-bold uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-2 group disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                   {!isSubmitting && <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />}

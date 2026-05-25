@@ -4,11 +4,11 @@ import { useState } from "react";
 const reviews = [
   {
     name: "Emily H.",
-    text: "I've been a member of GLADIATOR FITNESS for over a year, and I can't imagine my fitness routine without it. The group classes are my favorite – they're challenging, fun, and led by enthusiastic instructors."
+    text: "I've been a member of ZAMBIA FIT for over a year, and I can't imagine my fitness routine without it. The group classes are my favorite – they're challenging, fun, and led by enthusiastic instructors."
   },
   {
     name: "Alexandra T.",
-    text: "Joining GLADIATOR FITNESS was the best decision I made for my fitness journey. The trainers are so supportive and knowledgeable. The community here is incredible."
+    text: "Joining ZAMBIA FIT was the best decision I made for my fitness journey. The trainers are so supportive and knowledgeable. The community here is incredible."
   },
   {
     name: "Michael R.",
@@ -83,7 +83,7 @@ export function ReviewsSection() {
                     <div className="border border-brand-dark rounded-full px-6 py-2 shadow-sm">
                       <span className="font-semibold text-brand-dark tracking-wide">{reviews[currentIndex].name}</span>
                     </div>
-                    <div className="text-brand-orange text-5xl font-serif font-black leading-none opacity-50">"</div>
+                    <div className="text-brand-green text-5xl font-serif font-black leading-none opacity-50">"</div>
                  </div>
                  <p className="text-zinc-600 text-base md:text-lg leading-relaxed">
                    {reviews[currentIndex].text}
