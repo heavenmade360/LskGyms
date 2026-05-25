@@ -50,7 +50,7 @@ export function Gallery() {
           <h3 
             className="text-sm font-bold uppercase tracking-widest text-zinc-500 mb-4"
           >
-            Inside ZAMBIA FIT
+            Inside APEX ATHLETICS
           </h3>
           <h1 
             className="text-5xl sm:text-7xl md:text-8xl font-heading font-black uppercase tracking-tighter text-brand-dark mb-6 md:mb-8"

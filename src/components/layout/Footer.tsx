@@ -18,13 +18,13 @@ export function Footer() {
                 <path d="M16 8L24 16L16 24L8 16L16 8Z" fill="black"/>
               </svg>
               <span className="text-2xl font-heading font-black tracking-tighter text-white uppercase">
-                ZAMBIA FIT
+                APEX ATHLETICS
               </span>
             </Link>
             <p className="text-zinc-400 text-sm leading-relaxed">
               Plot 1234, Great East Road<br/>
               Arcades Area, Lusaka, Zambia<br/>
-              info@zambiasfitness.co.zm
+              info@apexathletics.com
             </p>
           </div>
 
@@ -79,7 +79,7 @@ export function Footer() {
           </div>
           
           <p className="text-zinc-500 text-xs">
-            Copyright © ZAMBIA FIT. All Rights Reserved.
+            Copyright © APEX ATHLETICS. All Rights Reserved.
           </p>
 
           <button onClick={scrollToTop} className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-brand-dark hover:bg-brand-green hover:text-white transition-colors">

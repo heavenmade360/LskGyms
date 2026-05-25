@@ -26,7 +26,7 @@ export function Navbar() {
                 <path d="M16 8L24 16L16 24L8 16L16 8Z" fill="white"/>
               </svg>
               <span className="text-2xl font-heading font-black tracking-tighter text-brand-dark uppercase">
-                ZAMBIA FIT
+                APEX ATHLETICS
               </span>
             </Link>
           </div>
